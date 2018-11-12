@@ -232,6 +232,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\PrestigeWorldwide20181106074231 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\PrestigeWorldwide20181111100924 - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -283,10 +284,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Role\View.cshtml" />
-    <Content Include="Views\Role\Create.cshtml" />
-    <Content Include="Views\Role\AssignRoleToUser.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPages\" />
