@@ -197,6 +197,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManageRolesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,10 +206,15 @@
     <Compile Include="Migrations\201811070109487_InitialCreate.Designer.cs">
       <DependentUpon>201811070109487_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811121841166_role.cs" />
+    <Compile Include="Migrations\201811121841166_role.Designer.cs">
+      <DependentUpon>201811121841166_role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -285,9 +291,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
-    <Content Include="Views\Role\Index.cshtml" />
-    <Content Include="Views\Role\Create.cshtml" />
-    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\ManageRoles\Index.cshtml" />
+    <Content Include="Views\ManageRoles\Create.cshtml" />
+    <Content Include="Views\ManageRoles\Edit.cshtml" />
+    <Content Include="Views\ManageRoles\Details.cshtml" />
+    <Content Include="Views\ManageRoles\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPages\" />
@@ -310,6 +318,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811070109487_InitialCreate.resx">
       <DependentUpon>201811070109487_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811121841166_role.resx">
+      <DependentUpon>201811121841166_role.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
