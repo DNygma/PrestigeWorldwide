@@ -153,7 +153,7 @@ namespace PrestigeWorldwide.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Register()
         {
             List<SelectListItem> list = new List<SelectListItem>();
@@ -166,7 +166,7 @@ namespace PrestigeWorldwide.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
@@ -194,7 +194,7 @@ namespace PrestigeWorldwide.Controllers
             return View(model);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
         public ActionResult RegisterRole()
         {
@@ -205,7 +205,7 @@ namespace PrestigeWorldwide.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RegisterRole(RegisterViewModel model, ApplicationUser user)
         {

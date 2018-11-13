@@ -8,7 +8,6 @@ using System.Web.Mvc;
 
 namespace PrestigeWorldwide.Controllers
 {
-    [Authorize]
     public class RoleController : Controller
     {
         private ApplicationDbContext context = new ApplicationDbContext();
@@ -18,20 +17,24 @@ namespace PrestigeWorldwide.Controllers
         {
             context = new ApplicationDbContext();
         }
-        
+
         // GET: Roles
+        [Authorize(Roles = "Administrator")]
         public ActionResult Index()
         {
             return View(context.Roles.ToList());
         }
 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create()
         {
 
 
             return View();
         }
+
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Create(FormCollection collection)
         {
             try
@@ -50,6 +53,7 @@ namespace PrestigeWorldwide.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(string RoleName)
         {
             var thisRole = context.Roles.Where(r => r.Name.Equals(RoleName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
@@ -58,7 +62,7 @@ namespace PrestigeWorldwide.Controllers
             return RedirectToAction("Create");
         }
 
-        //
+        [Authorize(Roles = "Administrator")]
         // GET: /Roles/Edit/5
         public ActionResult Edit(string roleName)
         {
@@ -67,7 +71,7 @@ namespace PrestigeWorldwide.Controllers
             return View(thisRole);
         }
 
-        //
+        [Authorize(Roles = "Administrator")]
         // POST: /Roles/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]

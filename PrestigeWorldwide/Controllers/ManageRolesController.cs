@@ -9,6 +9,7 @@ using PrestigeWorldwide.Models;
 
 namespace PrestigeWorldwide.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class ManageRolesController : Controller
     {
         private ApplicationRoleManager _roleManager;
