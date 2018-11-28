@@ -9,12 +9,12 @@ namespace PrestigeWorldwide.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize(Roles = "Administrator, portalAdmin, User")]
+        [Authorize(Roles = "Administrator, PortalAdmin, User")]
         public ActionResult Index()
         {
             return View();
         }
-        [Authorize(Roles = "Administrator, portalAdmin, User")]
+        [Authorize(Roles = "Administrator, PortalAdmin, User")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -22,7 +22,7 @@ namespace PrestigeWorldwide.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Administrator, portalAdmin")]
+        [Authorize(Roles = "Administrator, PortalAdmin")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -38,6 +38,7 @@ namespace PrestigeWorldwide.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         public ActionResult Register()
         {
             ViewBag.Message = "Register Employees";
