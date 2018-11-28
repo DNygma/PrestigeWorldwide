@@ -14,7 +14,7 @@ namespace PrestigeWorldwide.Controllers
         {
             return View();
         }
-        [Authorize(Roles = "Administrator, portalAdmin")]
+        [Authorize(Roles = "Administrator, portalAdmin, User")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

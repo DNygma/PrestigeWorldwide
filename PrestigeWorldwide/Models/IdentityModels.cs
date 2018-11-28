@@ -37,6 +37,8 @@ namespace PrestigeWorldwide.Models
             return new ApplicationDbContext();
         }
 
-       /* public System.Data.Entity.DbSet<PrestigeWorldwide.Models.RoleViewModel> RoleViewModels { get; set; } */
+        public System.Data.Entity.DbSet<PrestigeWorldwide.Models.Links> Links { get; set; }
+
+        /* public System.Data.Entity.DbSet<PrestigeWorldwide.Models.RoleViewModel> RoleViewModels { get; set; } */
     }
 }

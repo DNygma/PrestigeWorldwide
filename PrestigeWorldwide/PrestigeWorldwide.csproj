@@ -196,6 +196,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LinksController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManageRolesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -210,9 +211,14 @@
     <Compile Include="Migrations\201811121841166_role.Designer.cs">
       <DependentUpon>201811121841166_role.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811281819420_links.cs" />
+    <Compile Include="Migrations\201811281819420_links.Designer.cs">
+      <DependentUpon>201811281819420_links.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Links.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +302,11 @@
     <Content Include="Views\ManageRoles\Edit.cshtml" />
     <Content Include="Views\ManageRoles\Details.cshtml" />
     <Content Include="Views\ManageRoles\Delete.cshtml" />
+    <Content Include="Views\Links\Create.cshtml" />
+    <Content Include="Views\Links\Delete.cshtml" />
+    <Content Include="Views\Links\Details.cshtml" />
+    <Content Include="Views\Links\Edit.cshtml" />
+    <Content Include="Views\Links\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPages\" />
@@ -321,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811121841166_role.resx">
       <DependentUpon>201811121841166_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811281819420_links.resx">
+      <DependentUpon>201811281819420_links.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
